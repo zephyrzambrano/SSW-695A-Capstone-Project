@@ -1,1 +1,1 @@
-# SSW695A-Capstone-Project
+# SSW-695A-Capstone-Project
