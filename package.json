@@ -1,0 +1,21 @@
+{
+  "name": "ssw-695a-capstone-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "seed": "node ./tasks/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zephyrzambrano/SSW-695A-Capstone-Project.git"
+  },
+  "author": "Zephyr Zambrano, David Tsu, Akshay Lavhagale, Eman Alofi",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/zephyrzambrano/SSW-695A-Capstone-Project/issues"
+  },
+  "homepage": "https://github.com/zephyrzambrano/SSW-695A-Capstone-Project#readme"
+}
