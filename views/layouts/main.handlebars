@@ -12,12 +12,19 @@
     </head>
 
     <body>
-        <ul>
-            <li><a href="http://localhost:3000/home">Home</a></li>
-            <li><a href="http://localhost:3000/news">News</a></li>
-            <li><a href="http://localhost:3000/map">Map</a></li>
-            <li><a href="http://localhost:3000/resources">Resources</a></li>
+        <ul class="navbar">
+            <li class="navbar"><a href="http://localhost:3000/home" class="navbar">Home</a></li>
+            <li class="navbar dropdown">
+                <a href="http://localhost:3000/news" class="navbar">News</a>
+                <div class="navbar dropdown-content">
+                    <a href="http://localhost:3000/news/test" class="navbar">CDC 2019 Novel Coronavirus (RSS Feed)</a>
+                    <a href="http://localhost:3000/news/test2" class="navbar">CDC COVID-19 Science Updates Feed (RSS Feed)</a>
+                </div>
+            </li>
+            <li class="navbar"><a href="http://localhost:3000/map" class="navbar">Map</a></li>
+            <li class="navbar"><a href="http://localhost:3000/resources" class="navbar">Resources</a></li>
         </ul>
+
         <main>
             {{{body}}}
         </main>
