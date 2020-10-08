@@ -1,7 +1,5 @@
 const express = require("express");
-const path = require("path")
 const router = express.Router();
-const data = require("../data");
 
 router.get("/", async (req, res) => {
     try {
@@ -9,7 +7,6 @@ router.get("/", async (req, res) => {
     }
     catch (error) {
         res.redirect("/home/home.handlebars");
-        // res.status(404).send(error);
     }
 });
 
@@ -19,7 +16,6 @@ router.get("/test", async (req, res) => {
     }
     catch (error) {
         res.redirect("/home/home.handlebars");
-        // res.status(404).send(error);
     }
 });
 
@@ -29,7 +25,6 @@ router.get("/test2", async (req, res) => {
     }
     catch (error) {
         res.redirect("/home/home.handlebars");
-        // res.status(404).send(error);
     }
 });
 
