@@ -1,8 +1,73 @@
-<h1>Welcome to COVID Responsive!</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>This website aims to consolidate information on COVID-19 into one place,
-    so that users can be more informed about the status of the virus.
-</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>COVID Responsive</title>
+</head>
 
-<h2>COVID-19 Statistics</h2>
-<p>COVID-19 statistics go here.</p>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+            <p>COVID-19 Responsive</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:3000/home">Home</a></li>
+                <li><a href="http://localhost:3000/news">News</a></li>
+                <li><a href="http://localhost:3000/map">Map</a></li>
+                <li><a href="http://localhost:3000/resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="stats">
+            <div class="latest-report">
+                <div class="country">
+                    <div class="name">Loading...</div>
+                    <div class="change_country">change</div>
+                    <div class="search-country hide">
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="Search Country...">
+                            <img class="close" src="close.svg" alt="">
+                        </div>
+                        <div class="country-list">
+                    
+                        </div>
+                    </div>
+                </div>
+                <div class="total-cases">
+                    <div class="title">Total Cases</div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+                <div class="recovered">
+                    <div class="title">Recovered</div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+                <div class="deaths">
+                    <div class="title">Deaths</div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+
+            </div>
+            <div class="chart">
+                <canvas id="axes_line_chart"></canvas>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="copyright">
+                <p>Copyright © 2020 Software Capstone Project</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
