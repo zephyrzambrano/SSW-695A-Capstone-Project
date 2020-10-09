@@ -2,6 +2,7 @@ const homeRoutes = require("./home");
 const newsRoutes = require("./news");
 const mapRoutes = require("./map");
 const resourcesRoutes = require("./resources");
+const path = require("path");
 
 const constructorMethod = app => {
 
