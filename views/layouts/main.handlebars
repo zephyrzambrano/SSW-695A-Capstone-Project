@@ -1,19 +1,49 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>COVID Responsive</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/public/css/style.css">
-</head>
+        <link rel="stylesheet" href="/public/css/style.css">
+    </head>
 
-<body>
-    <main>
-        {{{body}}}
-    </main>
-</body>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="">
+                <p>COVID-19 Responsive</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:3000/home">Home</a></li>
+                    <li class="navbar dropdown">
+                        <a href="http://localhost:3000/news">News</a>
+                        <div class="navbar dropdown-content">
+                            <a href="http://localhost:3000/news/test">CDC 2019 Novel Coronavirus (RSS Feed)</a>
+                            <a href="http://localhost:3000/news/test2">CDC COVID-19 Science Updates Feed (RSS Feed)</a>
+                        </div>
+                    </li>
+                    <li><a href="http://localhost:3000/map">Map</a></li>
+                    <li><a href="http://localhost:3000/resources">Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {{{body}}}
+        </main>
+
+        <!--<footer>
+            <div class="footer-container">
+                <div class="copyright">
+                    <p>Copyright © 2020 Software Capstone Project</p>
+                </div>
+            </div>
+        </footer>-->
+    </body>
 
 </html>
