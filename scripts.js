@@ -1,35 +1,33 @@
+// Hide all content
+hideAllContent();
+
+// Loop through tabs
 var tabs = document.querySelectorAll(".tabs_wrap ul li");
-var physical = document.querySelectorAll(".phy");
-var mental = document.querySelectorAll(".mental");
-var all = document.querySelectorAll(".item_wrap");
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        // Reset Active State
+        tabs.forEach((tab) => {
+            tab.classList.remove("active");
+        })
 
-tabs.forEach((tab)=>{
-	tab.addEventListener("click", ()=>{
-		tabs.forEach((tab)=>{
-			tab.classList.remove("active");
-		})
-		tab.classList.add("active");
-		var tabval = tab.getAttribute("data-tabs");
+        // Apply Current Active State
+        tab.classList.add("active");
 
-		all.forEach((item)=>{
-			item.style.display = "none";
-		})
+        // Get active tab data
+        var tabval = tab.getAttribute("data-tabs");
 
-		if(tabval == "physical"){
-			males.forEach((physical)=>{
-				male.style.display = "block";
-			})
-		}
-		else if(tabval == "mental"){
-			females.forEach((mental)=>{
-				female.style.display = "block";
-			})
-		}
-		else{
-			all.forEach((item)=>{
-				item.style.display = "block";
-			})
-		}
+        // Hide all content
+        hideAllContent();
 
-	})
+        // Activate corresponding content
+        document.querySelectorAll("." + tabval).forEach((el) => {
+            el.style.display = "block";
+        })
+    })
 })
+
+function hideAllContent() {
+    [].forEach.call(document.querySelectorAll('.content_wrap'), function (el) {
+        el.style.display = 'none';
+    });
+}
