@@ -1,7 +1,7 @@
 let map, service, infoWindow;
 
 function initMap() {
-    let pos = {
+    let default_pos = {
         lat: 40.745,
         lng: -74.025, // defaults to Stevens' coordinates
     }
@@ -10,7 +10,7 @@ function initMap() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
-                pos = {
+                default_pos = {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude,
                 };
@@ -19,14 +19,14 @@ function initMap() {
     }
 
     map = new google.maps.Map(document.getElementById("map"), {
-        center: pos,
+        center: default_pos,
         zoom: 15,
     });
 
     const request = {
         query: "covid testing",
         fields: ['name', 'geometry', 'opening_hours'],
-        location: pos,
+        location: default_pos,
         radius: 10000,
         type: ['hospital', 'doctor', 'pharmacy', 'health'],
     };
@@ -34,33 +34,47 @@ function initMap() {
     service.textSearch(request, callback);
 
     infoWindow = new google.maps.InfoWindow();
-    // const locationButton = document.createElement("button");
-    // locationButton.textContent = "Pan to Current Location";
-    // locationButton.classList.add("custom-map-control-button");
-    // map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-    // locationButton.addEventListener("click", () => {
-    //     // Try HTML5 geolocation.
-    //     if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(
-    //         (position) => {
-    //         const pos = {
-    //             lat: position.coords.latitude,
-    //             lng: position.coords.longitude,
-    //         };
-    //         infoWindow.setPosition(pos);
-    //         infoWindow.setContent("Location found.");
-    //         infoWindow.open(map);
-    //         map.setCenter(pos);
-    //         },
-    //         () => {
-    //         handleLocationError(true, infoWindow, map.getCenter());
-    //         }
-    //     );
-    //     } else {
-    //     // Browser doesn't support Geolocation
-    //     handleLocationError(false, infoWindow, map.getCenter());
-    //     }
-    // });
+
+    // button to locate user
+    const locationButton = document.createElement("button");
+    locationButton.textContent = "Find nearest testing center!";
+    locationButton.classList.add("custom-map-control-button");
+    map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+    locationButton.addEventListener("click", () => {
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+            const pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent("Location found.");
+            infoWindow.open(map);
+            map.setCenter(pos);
+
+            const request2 = {
+                query: "covid testing",
+                fields: ['name', 'geometry', 'opening_hours'],
+                location: pos,
+                radius: 10000,
+                type: ['hospital', 'doctor', 'pharmacy', 'health'],
+            };
+            service = new google.maps.places.PlacesService(map);
+            service.textSearch(request2, callback);
+        
+            infoWindow = new google.maps.InfoWindow()
+            },
+            () => {
+            handleLocationError(true, infoWindow, map.getCenter());
+            }
+        );
+        } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+        }
+    });
 }
 
 function callback(results, status) {
