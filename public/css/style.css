@@ -121,11 +121,9 @@ nav li a:hover {
 }
       
 /* Optional: Makes the sample page fill the window. */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 40px;
+
+h1.maps {
+  text-align: center;
 }
 
 h1.news {
