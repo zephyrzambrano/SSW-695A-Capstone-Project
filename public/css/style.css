@@ -57,6 +57,10 @@ header {
 }
 
 /*NAV*/
+nav {
+
+}
+
 nav ul {
   display: flex;
   align-items: center;
@@ -127,9 +131,9 @@ ul li.news {
   text-align: center;
 }
 
-script.news {
+/*script.news {
   text-align: center;
-}
+}*/
 
 
 
@@ -141,7 +145,7 @@ main {
 /*BG IMAGE*/
 .stats {
   width: 100%;
-  background-image: linear-gradient(rgba(153, 148, 148, 0.9), rgba(0, 0, 0, 0.9)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url(bg.jpg);
   background-size: cover;
 }
