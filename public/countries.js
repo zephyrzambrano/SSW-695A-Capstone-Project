@@ -260,3 +260,10 @@ input.addEventListener("input", function(){
         }   
     })
 })
+
+// resetCountryList() - show all the country list
+function resetCountryList(){
+    country_list.forEach( country => {
+        document.getElementById(country.name).classList.remove("hide");
+    })
+}
