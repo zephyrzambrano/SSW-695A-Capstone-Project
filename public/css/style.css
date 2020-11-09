@@ -1,69 +1,9 @@
-/* https://www.w3schools.com/css/css_navbar.asp */
-/* navigation bar */
-
-ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-  
-li.navbar {
-    float: left;
-    border-right: 1px solid #bbb;
-}
-  
-li:last-child.navbar {
-    border-right: none;
-}
-
-li a.navbar {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-  
-/* Change the link color to #111 (black) on hover */
-li a:hover.navbar {
-    background-color: #111;
-}
+body {
+  background-image: url("hospital.png");
+  background-color: #cccccc;
+ }
 
 
-
-/* https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar */
-/* dropdown for navigation bar */
-
-li.navbar.dropdown {
-    display: inline-block;
-}
-  
-.navbar.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: lightgray;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-  
-.navbar.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-  
-.navbar.dropdown-content a:hover {
-    background-color: gray;
-}
-  
-.navbar.dropdown:hover .dropdown-content {
-    display: block;
-}
 /*LOAD FONTS*/
 @font-face {
   font-family: "Gilroy";
@@ -121,25 +61,84 @@ header {
   font-weight: bold;
   color: #6a149b;
 }
-/*NAV*/
-nav {
 
-}
+/*NAV*/
 nav ul {
   display: flex;
   align-items: center;
 }
+
 nav ul li {
   list-style: none;
 }
+
 nav ul li:last-child {
   padding-right: 20px;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #6a149b;
   padding: 10px;
 }
+
+nav li a:hover {
+  background-color: #6a149b;
+  color: #f3f3f2;
+}
+
+.nav.dropdown {
+  display: inline-block;
+}
+
+.nav.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f3f3f2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.nav.dropdown-content a {
+  color: #6a149b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav.dropdown-content a:hover {
+  background-color: #6a149b;
+  color: #f3f3f2;
+}
+  
+.nav.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+h1.news {
+  text-align: center;
+}
+
+p.news {
+  text-align: center;
+}
+
+ul.news {
+  text-align: center;
+}
+
+ul li.news {
+  text-align: center;
+}
+
+/*script.news {
+  text-align: center;
+}*/
+
+
+
 /*MAIN*/
 main {
   max-width: 1200 px;
@@ -323,4 +322,78 @@ footer{
   content: "";
   display: table;
   clear: both;
+}
+
+
+/*Resources CSS*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*body {
+    background: #7fc469;
+    color: #565e6b;
+}*/
+
+.wrapper {
+    width: 500px;
+    /* height: 100%; */
+    background: #fff;
+    margin: 15px auto 0;
+}
+
+.wrapper .title {
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 1px solid #ebedec;
+}
+
+.wrapper .tabs_wrap, .content_wrap {
+    padding: 20px;
+    border-bottom: 1px solid #ebedec;
+}
+
+.wrapper .tabs_wrap ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.wrapper .tabs_wrap ul li {
+    width: 135px;
+    text-align: center;
+    background: #e9ecf1;
+    border-right: 1px solid #c1c4c9;
+    padding: 13px 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.wrapper .tabs_wrap ul li:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.wrapper .tabs_wrap ul li:last-child {
+    border-right: 0px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.wrapper .tabs_wrap ul li:hover, .wrapper .tabs_wrap ul li.active {
+    background: #6a149b;
+    color: #fff;
 }
