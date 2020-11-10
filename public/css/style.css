@@ -1,7 +1,13 @@
+html, body {
+  height: 100%;
+}
+
 body {
   background-image: url("hospital.png");
-  background-color: #cccccc;
- }
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
 
 
 /*LOAD FONTS*/
