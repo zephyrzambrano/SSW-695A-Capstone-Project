@@ -347,6 +347,15 @@ footer{
     color: #565e6b;
 }*/
 
+ul > a{
+    list-style-type: square;
+  }
+.menutabs{
+    list-style-type: none;
+}
+li{
+    list-style-type: square;
+}
 .wrapper {
     width: 500px;
     /* height: 100%; */
