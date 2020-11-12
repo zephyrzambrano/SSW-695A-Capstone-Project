@@ -139,6 +139,21 @@ ul li.news {
   text-align: center;
 }
 
+.news {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+iframe.news {
+  display: inline;
+  align-self: center;
+  border: none;
+}
+
+.news-twitter{
+  display: inline;
+}
+
 /*script.news {
   text-align: center;
 }*/
