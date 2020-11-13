@@ -125,6 +125,11 @@ nav li a:hover {
 
 h1.news {
   text-align: center;
+  padding-bottom: 50px;
+}
+
+h2.news {
+  text-align: center;
 }
 
 p.news {
@@ -137,21 +142,19 @@ ul.news {
 
 ul li.news {
   text-align: center;
-}
-
-.news {
-  padding-left: 50px;
-  padding-right: 50px;
+  list-style: none;
 }
 
 iframe.news {
   display: inline;
   align-self: center;
   border: none;
+  padding-left: 150px;
 }
 
 .news-twitter{
   display: inline;
+  padding-left: 175px;
 }
 
 /*script.news {
