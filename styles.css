@@ -8,11 +8,20 @@
     box-sizing: border-box;
 }
 
-body {
+/*body {
     background: #7fc469;
     color: #565e6b;
-}
+}*/
 
+ul > a{
+    list-style-type: square;
+  }
+.menutabs{
+    list-style-type: none;
+}
+li{
+    list-style-type: square;
+}
 .wrapper {
     width: 500px;
     /* height: 100%; */
@@ -66,6 +75,6 @@ body {
 }
 
 .wrapper .tabs_wrap ul li:hover, .wrapper .tabs_wrap ul li.active {
-    background: #7fc469;
+    background: #6a149b;
     color: #fff;
 }

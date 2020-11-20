@@ -313,6 +313,7 @@ footer{
   display: table;
   clear: both;
 }
+
 /*Resources CSS*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
 * {
@@ -323,6 +324,7 @@ footer{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 /*body {
     background: #7fc469;
     color: #565e6b;
@@ -343,6 +345,7 @@ li{
     background: #fff;
     margin: 15px auto 0;
 }
+
 .wrapper .title {
     padding: 30px 20px;
     text-align: center;
@@ -355,6 +358,7 @@ li{
     padding: 20px;
     border-bottom: 1px solid #ebedec;
 }
+
 .wrapper .tabs_wrap ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -363,6 +367,7 @@ li{
     -ms-flex-pack: center;
     justify-content: center;
 }
+
 .wrapper .tabs_wrap ul li {
     width: 135px;
     text-align: center;
@@ -374,15 +379,18 @@ li{
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
+
 .wrapper .tabs_wrap ul li:first-child {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
+
 .wrapper .tabs_wrap ul li:last-child {
     border-right: 0px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+
 .wrapper .tabs_wrap ul li:hover, .wrapper .tabs_wrap ul li.active {
     background: #6a149b;
     color: #fff;
