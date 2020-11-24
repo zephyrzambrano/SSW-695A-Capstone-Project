@@ -1,3 +1,12 @@
+html, body {
+  height: 100%;
+}
+body {
+  background-image: url("hospital.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
 /*LOAD FONTS*/
 @font-face {
   font-family: "Gilroy";
@@ -32,14 +41,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   max-width: 1200px;
   width: 100%;
   height: 60px;
-
   margin: 0 auto;
-
-  background-color: #f3f3f2;
+  background-color: #6a149b;
 }
 /*LOGO*/
 .logo {
@@ -53,58 +59,50 @@ header {
 }
 .logo p {
   font-weight: bold;
-  color: #6a149b;
+  color: #f3f3f2;
 }
-
 /*NAV*/
 nav ul {
   display: flex;
   align-items: center;
 }
-
 nav ul li {
   list-style: none;
 }
-
 nav ul li:last-child {
   padding-right: 20px;
 }
-
 nav ul li a {
   text-decoration: none;
-  color: #6a149b;
+  color: #f3f3f2;
   padding: 10px;
 }
-
 nav li a:hover {
-  background-color: #6a149b;
-  color: #f3f3f2;
+  background-color: #f3f3f2;
+  color: #6a149b;
 }
-
 .nav.dropdown {
   display: inline-block;
 }
-
 .nav.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f3f3f2;
+    background-color: #6a149b;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
   
 .nav.dropdown-content a {
-  color: #6a149b;
+  color: #f3f3f2;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
-
 .nav.dropdown-content a:hover {
-  background-color: #6a149b;
-  color: #f3f3f2;
+  background-color: #f3f3f2;
+  color: #6a149b;
 }
   
 .nav.dropdown:hover .dropdown-content {
@@ -116,7 +114,6 @@ nav li a:hover {
   * element that contains the map. */
 #map {
   height: 500px;
-  background-color: red;
   padding: 10px;
 }
       
@@ -128,13 +125,14 @@ h1.maps {
 
 h1.news {
   text-align: center;
+  padding-bottom: 50px;
 }
 
-p.news {
+h2.news {
   text-align: center;
 }
 
-ul.news {
+p.news {
   text-align: center;
 }
 
@@ -185,11 +183,22 @@ ul li.news {
   border-color: #4d90fe;
 }
 
+/* TWITTER */
+iframe.news {
+  display: inline;
+  align-self: center;
+  border: none;
+  padding-left: 150px;
+}
+
+.news-twitter{
+  display: inline;
+  padding-left: 175px;
+}
+
 /*script.news {
   text-align: center;
 }*/
-
-
 
 /*MAIN*/
 main {
@@ -213,45 +222,37 @@ main {
   padding-top: 50px;
   color: #fff;
 }
-
 .country,
 .total-cases,
 .recovered,
 .deaths {
   height: 100 px;
 }
-
 .name {
   font-size: 2.2em;
   color: #be64f1;
   font-weight: bold;
 }
-
 .change-country {
   cursor: pointer;
 }
-
 .title {
   font-size: 1.3em;
 }
-
 .total-cases .value {
   font-size: 2 em;
   font-weight: bold;
 }
-
 .recovered .value {
   font-size: 2 em;
   font-weight: bold;
   color: #009688;
 }
-
 .deaths .value {
   font-size: 2 em;
   font-weight: bold;
   color: #f44336;
 }
-
 .new-value {
   font-size: 1.3em;
 }
@@ -260,7 +261,6 @@ main {
   width: 80%;
   height: 70vh;
   min-height: 500px;
-
   margin: 0 auto;
   padding: 50px 0;
 }
@@ -297,7 +297,6 @@ main {
     display: flex;
     position: absolute;
     top: 30px;
-
     width: 400px;
     height: 300px;
     background-color: #111;
@@ -333,7 +332,6 @@ main {
 .country-list::-webkit-scrollbar-thumb:hover {
     background: #fff;
 }
-
 /*FOOTER*/
 footer{
     max-width: 1200px;
@@ -368,14 +366,12 @@ footer{
   float: left;
   width: 50%;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 
 /*Resources CSS*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
@@ -393,6 +389,15 @@ footer{
     color: #565e6b;
 }*/
 
+ul > a{
+    list-style-type: square;
+  }
+.menutabs{
+    list-style-type: none;
+}
+li{
+    list-style-type: square;
+}
 .wrapper {
     width: 500px;
     /* height: 100%; */
