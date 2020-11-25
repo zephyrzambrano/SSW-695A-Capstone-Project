@@ -108,6 +108,21 @@ nav li a:hover {
 .nav.dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* MAPS */
+/* Always set the map height explicitly to define the size of the div
+  * element that contains the map. */
+#map {
+  height: 500px;
+  padding: 10px;
+}
+      
+/* Optional: Makes the sample page fill the window. */
+
+h1.maps {
+  text-align: center;
+}
+
 h1.news {
   text-align: center;
   padding-bottom: 50px;
@@ -125,7 +140,50 @@ ul li.news {
   text-align: center;
 }
 
-/*Video on the Home Page*/
+/* MAPS Search Bar */
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+/* TWITTER */
 iframe.news {
   display: inline;
   align-self: center;
