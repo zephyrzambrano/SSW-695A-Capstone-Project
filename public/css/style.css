@@ -125,11 +125,17 @@ ul li.news {
   text-align: center;
 }
 
+/*Video on the Home Page*/
 iframe.news {
   display: inline;
   align-self: center;
   border: none;
-  padding-left: 150px;
+}
+
+.news-video-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .news-twitter{
@@ -137,9 +143,11 @@ iframe.news {
   padding-left: 175px;
 }
 
-/*script.news {
+script.news {
   text-align: center;
-}*/
+  align-self: center;
+  padding-left: 175px;
+}
 
 /*MAIN*/
 main {
