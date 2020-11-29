@@ -13,9 +13,9 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.get("/test", async (req, res) => {
+router.get("/Videos", async (req, res) => {
     try {
-        res.render("news/test.handlebars");
+        res.render("news/videos.handlebars");
     }
     catch (error) {
         res.redirect("/home/home.handlebars");
@@ -23,9 +23,19 @@ router.get("/test", async (req, res) => {
     }
 });
 
-router.get("/test2", async (req, res) => {
+router.get("/CDC-2019-Novel-Coronavirus", async (req, res) => {
     try {
-        res.render("news/test2.handlebars");
+        res.render("news/CDC-2019-Novel-Coronavirus.handlebars");
+    }
+    catch (error) {
+        res.redirect("/home/home.handlebars");
+        // res.status(404).send(error);
+    }
+});
+
+router.get("/CDC-COVID-19-Science-Updates-Feed", async (req, res) => {
+    try {
+        res.render("news/CDC-COVID-19-Science-Updates-Feed.handlebars");
     }
     catch (error) {
         res.redirect("/home/home.handlebars");
