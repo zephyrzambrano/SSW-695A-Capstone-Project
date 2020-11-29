@@ -125,7 +125,8 @@ h1.maps {
 
 h1.news {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 h2.news {
