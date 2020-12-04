@@ -1,4 +1,4 @@
-// elements
+
 const country_name_element = document.querySelector(".country .name");
 const total_cases_element = document.querySelector(".total-cases .value");
 const new_cases_element = document.querySelector(".total-cases .new-value");
@@ -9,15 +9,13 @@ const new_deaths_element = document.querySelector(".deaths .new-value");
 
 const ctx = document.getElementById("axes_line_chart").getContext("2d");
 
-// variables
 let app_data = [],
   cases_list = [],
   recovered_list = [],
   deaths_list = [],
-  dates = [],
+  deaths = [],
   formatedDates = [];
 
-// country codes
 let country_code = geoplugin_countryCode();
 let user_country;
 country_list.forEach((country) => {
@@ -26,7 +24,7 @@ country_list.forEach((country) => {
   }
 });
 
-// fetching api
+
 function fetchData(country) {
   user_country = country;
   country_name_element.innerHTML = "Loading...";
@@ -44,9 +42,7 @@ function fetchData(country) {
 
   const api_fetch = async (country) => {
     await fetch(
-      "https://api.covid19api.com/total/country/" +
-        country +
-        "/status/confirmed",
+      
       requestOptions
     )
       .then((res) => {
@@ -60,9 +56,7 @@ function fetchData(country) {
       });
 
     await fetch(
-      "https://api.covid19api.com/total/country/" +
-        country +
-        "/status/recovered",
+      
       requestOptions
     )
       .then((res) => {
@@ -75,7 +69,7 @@ function fetchData(country) {
       });
 
     await fetch(
-      "https://api.covid19api.com/total/country/" + country + "/status/deaths",
+      
       requestOptions
     )
       .then((res) => {
@@ -168,7 +162,6 @@ function axesLinearChart() {
   });
 }
 
-// dates formatting
 const monthsNames = [
   "Jan",
   "Feb",
