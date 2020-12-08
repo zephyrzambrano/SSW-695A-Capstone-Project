@@ -1,1 +1,15 @@
-<h1>Google Maps integration goes here.</h1>
+<h1 class='maps'>Find your nearest testing center</h1>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=[API_KEY_GOES_HERE]&callback=initAutocomplete&libraries=places&v=weekly"
+    defer
+></script>
+<link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+<script src='/public/js/maps.js'></script>
+<input
+    id="pac-input"
+    class="controls"
+    type="text"
+    placeholder="Search Box"
+/>
+<div id="map"></div>
